@@ -1,8 +1,12 @@
 import os
 from openai import AzureOpenAI
+from dotenv import load_dotenv
 
-subscription_key = 'CHX7D9138qZtPaVXT6vsGbDasVc11vPMh4f4lnKiPomnWNvg1LVdJQQJ99CAACHYHv6XJ3w3AAAAACOG4DxW'
-endpoint = "https://nevilletestproject2-resource.cognitiveservices.azure.com/"
+load_dotenv()
+
+endpoint = os.getenv("ENDPOINT")
+subscription_key = os.getenv("SUBSCRIPTION_KEY")
+
 model_name = "gpt-4o"
 deployment = "gpt-4o"
 
